@@ -16,8 +16,8 @@ export class DashboardComponent implements OnInit {
     {value: 'assets/images/Asset_7.svg', viewValue: 'Yellow'}
   ];
 
-  topImage;
-  bottomImage;
+  topImage = "assets/images/Asset_2.svg";
+  bottomImage = "assets/images/Asset_6.svg";
   faceImage = "assets/images/Asset_3.svg";
 
   selectedTop = this.top[0].value;
@@ -25,18 +25,17 @@ export class DashboardComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-    this.topImage = "assets/images/Asset_2.svg";
-    this.bottomImage = "assets/images/Asset_6.svg";
-  }
+  ngOnInit(): void {}
 
-  valueChangeTop(data: any){
-    this.topImage = data;
-    console.log(this.topImage);
+  valueChange(data: any, top: boolean){
+    if(top) {
+      this.topImage = data;
+      console.log(this.topImage);
+    } else {
+      this.bottomImage = data;
+      console.log(this.bottomImage);
+    }
   }
-  valueChangeBottom(data: any){
-    this.bottomImage = data;
-    console.log(this.bottomImage);
-  }
+  
 
 }

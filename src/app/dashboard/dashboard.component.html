@@ -1,9 +1,6 @@
 <div class="container-fluid mt-5">
     <div class="text-center mb-5 fade-in">
-        <h1>
-            Character Design
-        </h1>
-        <!-- <mat-divider></mat-divider> -->
+        <h1>Character Design</h1>
     </div>
     <div class="row fade-in-delay">
         <div class="col-md-2"></div>
@@ -15,21 +12,19 @@
         <div class="col-md-4 text-center">
             <h5 style="margin-top: 3.5em;">Top Color</h5>
             <mat-form-field appearance="outline" class="mb-5">
-            <!-- <mat-label>Please Select Top</mat-label> -->
-            <mat-select (selectionChange)="valueChangeTop($event.value)" [(value)]="selectedTop" required>
-                <mat-option *ngFor="let top of top" [value]="top.value">
-                {{top.viewValue}}
-                </mat-option>
-            </mat-select>
+                <mat-select (selectionChange)="valueChange($event.value, true)" [(value)]="selectedTop" required>
+                    <mat-option *ngFor="let top of top" [value]="top.value">
+                        {{top.viewValue}}
+                    </mat-option>
+                </mat-select>
             </mat-form-field>
             <h5>Bottom Color</h5>
             <mat-form-field appearance="outline">
-            <!-- <mat-label>Select Bottom</mat-label> -->
-            <mat-select (selectionChange)="valueChangeBottom($event.value)" [(value)]="selectedBottom" required>
-                <mat-option *ngFor="let bottom of bottom" [value]="bottom.value" >
-                {{bottom.viewValue}}
-                </mat-option>
-            </mat-select>
+                <mat-select (selectionChange)="valueChange($event.value, false)" [(value)]="selectedBottom" required>
+                    <mat-option *ngFor="let bottom of bottom" [value]="bottom.value" >
+                        {{bottom.viewValue}}
+                    </mat-option>
+                </mat-select>
             </mat-form-field>
         </div>
         <div class="col-md-2"></div>
