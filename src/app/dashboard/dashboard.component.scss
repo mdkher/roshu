@@ -1,11 +1,16 @@
 .fade-in{
-    //animation: fadeIn 1.5s 0.5s forwards ease-in-out;
-    opacity: 1;
+    animation: fadeIn 0.5s 0.1s forwards ease-in-out;
+    opacity: 0;
+}
+
+.fade-in-delay{
+    animation: fadeIn 0.8s 0.4s forwards ease-in-out;
+    opacity: 0;
 }
 
 @keyframes fadeIn {
     0%{
-        transform: translateY(100%);
+        transform: translateY(200%);
         opacity: 0;
     }
     100%{
@@ -19,19 +24,20 @@
     height: 100px;
     z-index: 1;
     left: 40%;
+    top: 2vh;
 }
 
 .bodyTop{
     z-index: 10;
     position: absolute;
     left: 28.3%;
-    top: 10vh;
+    top: 12vh;
     height: 190px;
 }
 .bodyBottom{
     z-index: 8;
     position: absolute;
     left: 32.6%;
-    top: 25vh;
+    top: 27vh;
     height: 270px;
 }

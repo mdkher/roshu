@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSelectModule} from '@angular/material/select';
+import {MatDividerModule} from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {MatSelectModule} from '@angular/material/select';
     BrowserModule,
     AppRoutingModule,
     NoopAnimationsModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
