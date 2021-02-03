@@ -8,16 +8,17 @@ import { Component, OnInit } from '@angular/core';
 export class DashboardComponent implements OnInit {
 
   top: any[] = [
-    {value: '../../assets/Asset_2.svg', viewValue: 'Blue'},
-    {value: '../../assets/Asset_4.svg', viewValue: 'Pink'}
+    {value: 'assets/Asset_2.svg', viewValue: 'Blue'},
+    {value: 'assets/Asset_4.svg', viewValue: 'Pink'}
   ];
   bottom: any[] = [
-    {value: '../../assets/Asset_6.svg', viewValue: 'Pink'},
-    {value: '../../assets/Asset_7.svg', viewValue: 'Yellow'}
+    {value: 'assets/Asset_6.svg', viewValue: 'Pink'},
+    {value: 'assets/Asset_7.svg', viewValue: 'Yellow'}
   ];
 
   topImage;
   bottomImage;
+  faceImage = "assets/Asset_3.svg";
 
   selectedTop = this.top[0].value;
   selectedBottom = this.bottom[0].value;
@@ -25,8 +26,8 @@ export class DashboardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.topImage = "../../assets/Asset_2.svg";
-    this.bottomImage = "../../assets/Asset_6.svg";
+    this.topImage = "assets/Asset_2.svg";
+    this.bottomImage = "assets/Asset_6.svg";
   }
 
   valueChangeTop(data: any){
