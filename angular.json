@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "roshu1": {
+    "roshu": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "docs/",
+            "outputPath": "dist/roshu",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -69,18 +69,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "roshu1:build"
+            "browserTarget": "roshu:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "roshu1:build:production"
+              "browserTarget": "roshu:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "roshu1:build"
+            "browserTarget": "roshu:build"
           }
         },
         "test": {
@@ -117,11 +117,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "roshu1:serve"
+            "devServerTarget": "roshu:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "roshu1:serve:production"
+              "devServerTarget": "roshu:serve:production"
             }
           }
         },
@@ -132,5 +132,5 @@
       }
     }
   },
-  "defaultProject": "roshu1"
+  "defaultProject": "roshu"
 }
