@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
     background.classList.toggle('clicked');
     setTimeout(() => {
       this.router.navigate(['dashboard']);
-  }, 600);
+  }, 500);
   }
 
 }

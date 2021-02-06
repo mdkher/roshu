@@ -21,7 +21,6 @@
     margin-top: 200px;
     opacity: 0;
     text-align: center;
-    //color: white;
     animation: click 1s 2s infinite ease-in-out;
 }
 
@@ -40,8 +39,6 @@
     background-color: black;
     min-width: 100%;
     min-height: 100vh;
-    
-    //animation: all 1.5s ease-in-out;
 }
 
 .defaultBG{
@@ -83,8 +80,10 @@
 @keyframes fadeOut {
     0%{
         background-color: black;
+        transform: translateY(0);
     }
     100%{
         background-color: white;
+        transform: translateY(-100%);
     }
 }
