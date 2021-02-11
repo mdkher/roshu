@@ -21,25 +21,25 @@
 
 .face{
     position: absolute;
-    height: 100px;
+    height: 84px;
     z-index: 1;
-    left: 40%;
+    left: 50%;
     top: 2vh;
 }
 
 .bodyTop{
     z-index: 10;
     position: absolute;
-    left: 28.3%;
-    top: 12vh;
-    height: 190px;
+    left: 17.9%;
+    top: 7.5vh;
+    // height: 190px;
 }
 .bodyBottom{
     z-index: 8;
     position: absolute;
-    left: 32.6%;
-    top: 27vh;
-    height: 270px;
+    left: 17.9%;
+    top: 19.8vh;
+    // height: 270px;
 }
 
 .footer{

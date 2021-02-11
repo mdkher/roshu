@@ -8,12 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class DashboardComponent implements OnInit {
 
   top: any[] = [
-    {value: 'assets/images/Blue_Top.svg', viewValue: 'Blue'},
-    {value: 'assets/images/Pink_Top.svg', viewValue: 'Pink'}
+    {value: 'assets/images/top1.svg', viewValue: 'top/1'},
+    {value: 'assets/images/top2.svg', viewValue: 'top/2'},
+    {value: 'assets/images/top3.svg', viewValue: 'top/3'},
   ];
   bottom: any[] = [
-    {value: 'assets/images/Pink_Bottom.svg', viewValue: 'Pink'},
-    {value: 'assets/images/Yellow_Bottom.svg', viewValue: 'Yellow'}
+    {value: 'assets/images/bottom-1.svg', viewValue: 'bottom-1'},
   ];
 
   topImage = this.top[0].value;
