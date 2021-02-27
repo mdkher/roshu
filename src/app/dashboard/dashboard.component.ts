@@ -40,7 +40,7 @@ export class DashboardComponent implements OnInit {
     { value: 'assets/images/torso 30.svg', viewValue: 'Bag' },
   ];
   head: any[] = [
-    { value: 'assets/images/head 1.svg', viewValue: 'Lady - Loose Pony Tail' },
+    // { value: 'assets/images/head 1.svg', viewValue: 'Lady - Loose Pony Tail' },
     { value: 'assets/images/head 2.svg', viewValue: 'Girl - High Pony Tail' },
     { value: 'assets/images/head 3.svg', viewValue: 'Boy' },
     { value: 'assets/images/head 4.svg', viewValue: 'Boy - Beard' },
