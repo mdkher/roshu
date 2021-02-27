@@ -5,17 +5,34 @@
     <div class="row fade-in-delay">
         <div class="col-md-2"></div>
         <div class="col-md-4" style="border: 2px solid black; height: 500px;">
-            <img src={{faceImage}} class="face" alt="Face">
+            <img src={{headImage}} class="head" alt="Face">
             <img src={{topImage}} class="bodyTop" alt="Body Top">
             <img src={{bottomImage}} class="bodyBottom" alt="Body Bottom">
+            <img src={{backgroundImage}} class="backgroundImage" alt="Background">
             <!-- <img src={{faceImage}} style="height: 200px; position: absolute;" alt="Face">
             <img src={{topImage}} style="height: 200px; position: absolute; margin-top: 200px;" alt="Body Top">
             <img src={{bottomImage}} style="height: 200px; position: absolute; margin-top: 400px;" alt="Body Bottom"> -->
         </div>
         <div class="col-md-4 text-center">
-            <h5 style="margin-top: 3.5em;">Top Color</h5>
-            <mat-form-field appearance="outline" class="mb-5">
-                <mat-select (selectionChange)="valueChange($event.value, true)" [(value)]="selectedTop" required>
+            <h5 style="margin-top: 1em;">Background Color</h5>
+            <mat-form-field appearance="outline" class="mb-1">
+                <mat-select (selectionChange)="valueChange($event.value, 3)" [(value)]="selectedBackground" required>
+                    <mat-option *ngFor="let top of background" [value]="top.value">
+                        {{top.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <h5>Head Color</h5>
+            <mat-form-field appearance="outline" class="mb-1">
+                <mat-select (selectionChange)="valueChange($event.value, 2)" [(value)]="selectedHead" required>
+                    <mat-option *ngFor="let top of head" [value]="top.value">
+                        {{top.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <h5>Top Color</h5>
+            <mat-form-field appearance="outline" class="mb-1">
+                <mat-select (selectionChange)="valueChange($event.value, 0)" [(value)]="selectedTop" required>
                     <mat-option *ngFor="let top of top" [value]="top.value">
                         {{top.viewValue}}
                     </mat-option>
@@ -23,8 +40,8 @@
             </mat-form-field>
             <h5>Bottom Color</h5>
             <mat-form-field appearance="outline">
-                <mat-select (selectionChange)="valueChange($event.value, false)" [(value)]="selectedBottom" required>
-                    <mat-option *ngFor="let bottom of bottom" [value]="bottom.value" >
+                <mat-select (selectionChange)="valueChange($event.value, 1)" [(value)]="selectedBottom" required>
+                    <mat-option *ngFor="let bottom of bottom" [value]="bottom.value">
                         {{bottom.viewValue}}
                     </mat-option>
                 </mat-select>
